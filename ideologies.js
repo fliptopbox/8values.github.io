@@ -1,4 +1,4 @@
-ideologies = [
+window.ideologies = [
     {
         "name": "Anarcho-Communism",
         "stats": {

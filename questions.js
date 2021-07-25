@@ -1,4 +1,4 @@
-questions = [
+window.questions = [
   {
     question:
       "L’estat hauria de controlar els hospitals i centres sanitaris, sense deixar competència a empreses privades.",
@@ -6,8 +6,8 @@ questions = [
       econ: 10,
       dipl: 0, // indp
       govt: -5,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "S’hauria de reduir la presència de policia al carrer.",
@@ -15,8 +15,8 @@ questions = [
       econ: 10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "L'avortament hauria de ser legal i gratuït en tots els casos.",
@@ -24,8 +24,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "La policia nacional no hauria d’actuar a Catalunya",
@@ -33,8 +33,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -43,8 +43,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -53,8 +53,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -63,8 +63,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "L’aplicació de l’article 155 al 2017 va ser encertada.",
@@ -72,8 +72,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "Els bilionaris no haurien d'existir.",
@@ -81,8 +81,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -91,8 +91,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -101,8 +101,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "Catalunya hauria d’esdevenir un estat independent d’Espanya.",
@@ -110,8 +110,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "Les companyies elèctriques haurien de ser públiques.",
@@ -119,8 +119,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "El sou mínim és bó i/o necessari.",
@@ -128,8 +128,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -138,8 +138,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -148,8 +148,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -158,8 +158,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
 
   {
@@ -169,8 +169,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -179,8 +179,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -189,8 +189,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -199,8 +199,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question:
@@ -209,8 +209,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "La societat era millor abans que no ara.",
@@ -218,8 +218,8 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
+      scty: 0,
+    },
   },
   {
     question: "La unitat d’Espanya és o hauria de ser inquebrentable.",
@@ -227,7 +227,7 @@ questions = [
       econ: -10,
       dipl: 0,
       govt: 0,
-      scty: 0
-    }
-  }
-];
+      scty: 0,
+    },
+  },
+].slice(0, 5);
