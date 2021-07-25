@@ -230,4 +230,4 @@ window.questions = [
       scty: 0,
     },
   },
-].slice(0, 5);
+];
