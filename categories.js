@@ -1,3 +1,9 @@
+/*
+
+  This glossary is used on the results page
+  You need to translate the words "In Quotations"
+
+*/
 window.glossary = {
   // English : Translation
   Unknown: "Unknown",
@@ -36,8 +42,22 @@ window.glossary = {
   Neutral: "Neutral",
   Traditional: "Traditional",
   VeryTraditional: "Very Traditional",
-  Reactionary: "Reactionary",
+  Reactionary: "Reactionary"
 };
+
+/* 
+
+
+
+
+
+
+
+
+
+
+Do not change anything below this line
+--------------------------------------- */
 
 window.econArray = [
   "Communist",
@@ -46,7 +66,7 @@ window.econArray = [
   "Centrist",
   "Market",
   "Capitalist",
-  "LaissezFaire",
+  "LaissezFaire"
 ];
 
 window.diplArray = [
@@ -56,7 +76,7 @@ window.diplArray = [
   "Balanced",
   "Patriotic",
   "Nationalist",
-  "Chauvinist",
+  "Chauvinist"
 ];
 
 window.govtArray = [
@@ -66,7 +86,7 @@ window.govtArray = [
   "Moderate",
   "Statist",
   "Authoritarian",
-  "Totalitarian",
+  "Totalitarian"
 ];
 
 window.sctyArray = [
@@ -76,5 +96,5 @@ window.sctyArray = [
   "Neutral",
   "Traditional",
   "VeryTraditional",
-  "Reactionary",
+  "Reactionary"
 ];
