@@ -29,17 +29,18 @@ p {
 }
 
 p.value {
-  margin-top: 22px;
-  margin-bottom: 22px;
-  text-indent: -16pt;
-  margin-left: 20pt;
-  font-size: 28px;
-  line-height: 2.11666656px;
+  text-align: center;
+  white-space: nowrap;
+  margin: 22px auto 32px;
+  font-size: 24px;
   font-family: "Montserrat";
 }
 
 p.blurb-text {
-  font-size: 27px;
+  font-size: 18px;
+  padding: 0 1em;
+  text-align: center;
+  line-height: 1.2;
 }
 
 p.axis_name {
@@ -49,21 +50,21 @@ p.axis_name {
   font-family: "Montserrat";
 }
 p.question {
-    margin: 16px auto;
-    color: #333333;
-    font-family: "Montserrat", sans-serif;
-    font-weight: normal;
-    width: 70%;
-    min-width: 500pt;
-    min-height: 10rem;
-    background-color: #eeeeee;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    font-size: 2.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  margin: 16px auto;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  width: 70%;
+  min-width: 500pt;
+  min-height: 10rem;
+  background-color: #eeeeee;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 h1 {
   color: #222222;
