@@ -14,24 +14,14 @@
     <script>
       version = "Test Edition #1"; //Remember to update this before making changes to the test itself!
     </script>
-  </head>
-
-  <body>
-    <h1 onclick="location.href='/'">On sóc políticament?</h1>
-    <hr />
-
-    <h1>Save my opinion</h1>
-
-    <p>Explain to the user why it is important to know this information.</p>
-    <br />
-    <p>
-      Adipisicing perspiciatis laboriosam labore eveniet in. Unde labore
-      reiciendis architecto veritatis inventore ipsa? Tempore corrupti excepturi
-      saepe similique repellendus in Atque eum quidem eveniet exercitationem
-      atque iste! Possimus dignissimos in
-    </p>
-
     <script>
+      function showErrors() {
+        const el = document.querySelector("[name='demographic']");
+        el.classList.add("show-errors");
+        setTimeout(() => {
+          el.classList.remove("show-errors");
+        }, 2000);
+      }
       function validate(button) {
         const form = button.closest("form");
         const rows = form.querySelectorAll(".form-row");
@@ -42,49 +32,77 @@
           const count = inputs.filter((el) => el.checked);
           errors += count.length ? 0 : 1;
         });
+
+        if (errors) showErrors();
         return errors ? false : true;
       }
     </script>
 
-    <form action="/quiz.html" name="contact" method="GET" >
+  </head>
+
+  <body>
+    <h1 onclick="location.href='/'">On sóc políticament?</h1>
+    <h2>Demographic</h2>
+
+    <p class="center"><strong>
+    Explain to the user why it is important to know this information.
+    </strong>
+    </p>
+    <p>
+      Adipisicing perspiciatis laboriosam labore eveniet in. Unde labore
+      reiciendis architecto veritatis inventore ipsa? Tempore corrupti excepturi
+      saepe similique repellendus in Atque eum quidem eveniet exercitationem
+      atque iste! Possimus dignissimos in
+    </p>
+
+    <form action="/quiz.html" name="demographic" method="GET" >
       <div class="form-row">
-        <label>Your Province:</label>
-        <input type="radio" name="province" value="Barcelona" />Barcelona
-        <input type="radio" name="province" value="Girona" />Girona
-        <input type="radio" name="province" value="Lleida" />Lleida
-        <input type="radio" name="province" value="Tarragona" />Tarragona
+        <strong>Your Province:</strong>
+        <span>
+        <label>Barcelona <input type="radio" name="province" value="Barcelona" /></label>
+        <label>Girona <input type="radio" name="province" value="Girona" /></label>
+        <label>Lleida <input type="radio" name="province" value="Lleida" /></label>
+        <label>Tarragona <input type="radio" name="province" value="Tarragona" /></label>
+        </span>
       </div>
 
       <div class="form-row">
-        <label>Your Age Group:</label>
-        <input type="radio" name="age" value="<19" />Under 19
-        <input type="radio" name="age" value="20-29" />20s
-        <input type="radio" name="age" value="30-39" />30s
-        <input type="radio" name="age" value="40-49" />40s
-        <input type="radio" name="age" value="50-59" />50s
-        <input type="radio" name="age" value="60-69" />60s
-        <input type="radio" name="age" value="70+" />70+
+        <strong>Your Age Group:</strong>
+        <span>
+        <label>Under 19 <input type="radio" name="age" value="<19" /></label>
+        <label>20s <input type="radio" name="age" value="20-29" /></label>
+        <label>30s <input type="radio" name="age" value="30-39" /></label>
+        <label>40s <input type="radio" name="age" value="40-49" /></label>
+        <label>50s <input type="radio" name="age" value="50-59" /></label>
+        <label>60s <input type="radio" name="age" value="60-69" /></label>
+        <label>70+ <input type="radio" name="age" value="70+" /></label>
+        </span>
       </div>
 
       <div class="form-row">
-        <label>Your Gender:</label>
-        <input type="radio" name="gender" value="male" /> male
-        <input type="radio" name="gender" value="female" /> female
-        <input type="radio" name="gender" value="other" /> other
+        <strong>Your Gender:</strong>
+        <span>
+        <label>Male <input type="radio" name="gender" value="male" /></label>
+        <label>Female <input type="radio" name="gender" value="female" /></label>
+        <label>Other <input type="radio" name="gender" value="other" /></label>
+        </span>
       </div>
 
       <div class="form-row">
-        <label>Self Assesment:</label>
+        <strong>Self Assesment:</strong>
+        <span>
         Left
-        <input type="radio" name="assesment" value="-15" />
-        <input type="radio" name="assesment" value="-10" />
-        <input type="radio" name="assesment" value="-5" />
-        <input type="radio" name="assesment" value="0" />
-        <input type="radio" name="assesment" value="5" />
-        <input type="radio" name="assesment" value="10" />
-        <input type="radio" name="assesment" value="15" />
+        <label><input type="radio" name="assesment" value="-15" /></label>
+        <label><input type="radio" name="assesment" value="-10" /></label>
+        <label><input type="radio" name="assesment" value="-5" /></label>
+        <label><input type="radio" name="assesment" value="0" /></label>
+        <label><input type="radio" name="assesment" value="5" /></label>
+        <label><input type="radio" name="assesment" value="10" /></label>
+        <label><input type="radio" name="assesment" value="15" /></label>
         Right
+        </span>
       </div>
+
       <button
         class="button start"
         type="submit"
@@ -92,6 +110,10 @@
       >
         Begin the quiz
       </button>
+
+          <div class="error-message">
+              The form is incomplete please try again.
+          </div>
     </form>
   </body>
 </html>

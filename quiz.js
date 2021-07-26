@@ -40,11 +40,16 @@ function init_question() {
 }
 
 function next_question(mult) {
-  econ_array[qn] = mult * questions[qn].effect.econ;
-  dipl_array[qn] = mult * questions[qn].effect.indp;
-  govt_array[qn] = mult * questions[qn].effect.govt;
-  scty_array[qn] = mult * questions[qn].effect.scty;
-  qn++;
+  try {
+    econ_array[qn] = mult * questions[qn].effect.econ;
+    dipl_array[qn] = mult * questions[qn].effect.indp;
+    govt_array[qn] = mult * questions[qn].effect.govt;
+    scty_array[qn] = mult * questions[qn].effect.scty;
+    qn++;
+  } catch (err) {
+    console.log(qn, questions.length, err);
+  }
+
   if (qn < questions.length) {
     init_question();
   } else {
@@ -72,7 +77,9 @@ function results() {
   let final_govt = total(govt_array);
   let final_scty = total(scty_array);
 
-  const form = document.querySelector("#quizform");
+  const { origin } = window.location;
+  const production = /netlify/i;
+  const form = document.querySelector("[name='user-data']");
   const date = new Date().toISOString();
 
   // update the hidden fields
@@ -92,5 +99,6 @@ function results() {
   // update the form action
   const action = `/results.html?e=${data.e}&d=${data.d}&g=${data.g}&s=${data.s}`;
   form.action = action;
-  form.style.display = "block";
+  form.method = production.test(origin) ? "POST" : "GET";
+  form.submit();
 }

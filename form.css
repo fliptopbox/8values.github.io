@@ -1,28 +1,45 @@
-
 form {
-    display:block;
-    margin: 3rem auto;
+  display: block;
+  margin: 3rem auto;
 }
 
 .form-row {
-    font-size:1.5em;
-    width: 55rem;
-    margin: 1rem auto;
+  font-size: 1.5em;
+  width: 55rem;
+  margin: 1rem auto;
 }
 
+.form-row strong {
+  font-weight: 700;
+  width: 13rem;
+  display: inline-block;
+}
 .form-row label {
-    font-weight:700;
-    width: 15rem;
-    display:inline-block;
+  border-left: 1px solid black;
+  padding-left: 0.5em;
 }
 
-form button {
-    background: blue;
-    font-size: 2rem;
-    border: none;
-    color: white;
-    padding: 0.5rem 3rem;
-    border-radius: 5px;
-    margin: 3rem auto 0;
-    display: block;
+.form-row label:first-child {
+  padding-left: 0;
+  border: none;
+}
+
+.form-row label input {
+}
+
+form.show-errors .error-message {
+  display: block;
+}
+
+.error-message {
+  display: none;
+  text-align: center;
+  font-size: 1.6em;
+  background: pink;
+  border: 1px solid red;
+  padding: 0.5em 3em;
+  border-radius: 10px;
+  margin: auto;
+  width: 50%;
+  color: red;
 }

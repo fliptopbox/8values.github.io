@@ -12,6 +12,8 @@ body {
   border-left-style: solid;
   border-right-style: solid;
   border-width: 20px;
+
+  font-family: "Roboto", sans-serif;
 }
 
 table.table-grid {
@@ -20,9 +22,12 @@ table.table-grid {
   margin: 0 auto;
 }
 
+.center {
+    text-align:center;
+}
+
 p {
   color: #444444;
-  font-family: "Roboto", sans-serif;
   font-size: 16pt;
   line-height: 1;
   margin: 4pt;
@@ -33,7 +38,6 @@ p.value {
   white-space: nowrap;
   margin: 22px auto 32px;
   font-size: 24px;
-  font-family: "Montserrat";
 }
 
 p.blurb-text {
@@ -47,12 +51,10 @@ p.axis_name {
   margin-top: 50px;
   color: #333333;
   font-size: 24px;
-  font-family: "Montserrat";
 }
 p.question {
   margin: 16px auto;
   color: #333333;
-  font-family: "Montserrat", sans-serif;
   font-weight: normal;
   width: 70%;
   min-width: 500pt;
@@ -68,15 +70,14 @@ p.question {
 }
 h1 {
   color: #222222;
-  font-family: "Montserrat", sans-serif;
   font-size: 5em;
   text-align: center;
   margin: 0 auto;
 }
 h2 {
   color: #333333;
-  font-family: "Montserrat", sans-serif;
   font-size: 3em;
+  text-align: center;
   margin: 0 auto;
 }
 li {
@@ -102,7 +103,6 @@ img.center {
 }
 .button {
   background-color: #2196f3;
-  font-family: "Montserrat", sans-serif;
   border: none;
   border-radius: 8pt;
   color: white;
@@ -162,7 +162,6 @@ img.center {
 .small_button,
 .small_button_off {
   background-color: #333;
-  font-family: "Montserrat", sans-serif;
   border: none;
   border-radius: 8pt;
   color: white;
@@ -231,7 +230,6 @@ div.bar {
   width: 50%;
 }
 div.text-wrapper {
-  font-family: "Montserrat", sans-serif;
   font-size: 36pt;
   line-height: 36pt;
   color: #222222;

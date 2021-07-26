@@ -41,10 +41,9 @@
     <button class="small_button_off" id="back_button_off">Enrere</button><br />
 
     <form
-      id="quizform"
       name="user-data"
       action="/results.html"
-      method="POST"
+      method="GET"
       style="display:none"
       netlify-honeypot="bot-field"
       data-netlify="true"
@@ -60,8 +59,6 @@
       <input type="hidden" name="d" value="" />
       <input type="hidden" name="g" value="" />
       <input type="hidden" name="s" value="" />
-
-      <button class="button start" type="submit">See results</button>
     </form>
 
     <!-- JavaScript for the test itself -->
