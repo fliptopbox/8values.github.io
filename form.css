@@ -24,9 +24,6 @@ form {
   border: none;
 }
 
-.form-row label input {
-}
-
 form.show-errors .error-message {
   display: block;
 }

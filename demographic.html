@@ -20,10 +20,10 @@
         el.classList.add("show-errors");
         setTimeout(() => {
           el.classList.remove("show-errors");
-        }, 2000);
+        }, 4000);
       }
-      function validate(button) {
-        const form = button.closest("form");
+      function validate(el) {
+        const form = document.querySelector("form");
         const rows = form.querySelectorAll(".form-row");
         let errors = 0;
 
@@ -37,16 +37,16 @@
         return errors ? false : true;
       }
     </script>
-
   </head>
 
   <body>
     <h1 onclick="location.href='/'">On sóc políticament?</h1>
     <h2>Demographic</h2>
 
-    <p class="center"><strong>
-    Explain to the user why it is important to know this information.
-    </strong>
+    <p class="center">
+      <strong>
+        Explain to the user why it is important to know this information.
+      </strong>
     </p>
     <p>
       Adipisicing perspiciatis laboriosam labore eveniet in. Unde labore
@@ -55,51 +55,63 @@
       atque iste! Possimus dignissimos in
     </p>
 
-    <form action="/quiz.html" name="demographic" method="GET" >
+    <form action="/quiz.html" name="demographic" method="GET">
       <div class="form-row">
         <strong>Your Province:</strong>
         <span>
-        <label>Barcelona <input type="radio" name="province" value="Barcelona" /></label>
-        <label>Girona <input type="radio" name="province" value="Girona" /></label>
-        <label>Lleida <input type="radio" name="province" value="Lleida" /></label>
-        <label>Tarragona <input type="radio" name="province" value="Tarragona" /></label>
+          <label
+            >Barcelona <input type="radio" name="province" value="Barcelona"
+          /></label>
+          <label
+            >Girona <input type="radio" name="province" value="Girona"
+          /></label>
+          <label
+            >Lleida <input type="radio" name="province" value="Lleida"
+          /></label>
+          <label
+            >Tarragona <input type="radio" name="province" value="Tarragona"
+          /></label>
         </span>
       </div>
 
       <div class="form-row">
         <strong>Your Age Group:</strong>
         <span>
-        <label>Under 19 <input type="radio" name="age" value="<19" /></label>
-        <label>20s <input type="radio" name="age" value="20-29" /></label>
-        <label>30s <input type="radio" name="age" value="30-39" /></label>
-        <label>40s <input type="radio" name="age" value="40-49" /></label>
-        <label>50s <input type="radio" name="age" value="50-59" /></label>
-        <label>60s <input type="radio" name="age" value="60-69" /></label>
-        <label>70+ <input type="radio" name="age" value="70+" /></label>
+          <label>Under 19 <input type="radio" name="age" value="<19" /></label>
+          <label>20s <input type="radio" name="age" value="20-29" /></label>
+          <label>30s <input type="radio" name="age" value="30-39" /></label>
+          <label>40s <input type="radio" name="age" value="40-49" /></label>
+          <label>50s <input type="radio" name="age" value="50-59" /></label>
+          <label>60s <input type="radio" name="age" value="60-69" /></label>
+          <label>70+ <input type="radio" name="age" value="70+" /></label>
         </span>
       </div>
 
       <div class="form-row">
         <strong>Your Gender:</strong>
         <span>
-        <label>Male <input type="radio" name="gender" value="male" /></label>
-        <label>Female <input type="radio" name="gender" value="female" /></label>
-        <label>Other <input type="radio" name="gender" value="other" /></label>
+          <label>Male <input type="radio" name="gender" value="male" /></label>
+          <label
+            >Female <input type="radio" name="gender" value="female"
+          /></label>
+          <label
+            >Other <input type="radio" name="gender" value="other"
+          /></label>
         </span>
       </div>
 
       <div class="form-row">
         <strong>Self Assesment:</strong>
         <span>
-        Left
-        <label><input type="radio" name="assesment" value="-15" /></label>
-        <label><input type="radio" name="assesment" value="-10" /></label>
-        <label><input type="radio" name="assesment" value="-5" /></label>
-        <label><input type="radio" name="assesment" value="0" /></label>
-        <label><input type="radio" name="assesment" value="5" /></label>
-        <label><input type="radio" name="assesment" value="10" /></label>
-        <label><input type="radio" name="assesment" value="15" /></label>
-        Right
+          Left
+          <label><input type="radio" name="assesment" value="-15" /></label>
+          <label><input type="radio" name="assesment" value="-10" /></label>
+          <label><input type="radio" name="assesment" value="-5" /></label>
+          <label><input type="radio" name="assesment" value="0" /></label>
+          <label><input type="radio" name="assesment" value="5" /></label>
+          <label><input type="radio" name="assesment" value="10" /></label>
+          <label><input type="radio" name="assesment" value="15" /></label>
+          Right
         </span>
       </div>
 
@@ -111,9 +123,7 @@
         Begin the quiz
       </button>
 
-          <div class="error-message">
-              The form is incomplete please try again.
-          </div>
+      <div class="error-message">The form is incomplete please try again.</div>
     </form>
   </body>
 </html>
