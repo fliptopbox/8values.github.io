@@ -25,7 +25,7 @@ setBarValue("progress", progress);
 setBarValue("tradition", tradition);
 
 updateDomLabel("economic-label", equality, econArray);
-updateDomLabel("diplomatic-label", peace, diplArray);
+updateDomLabel("diplomatic-label", peace, indpArray);
 updateDomLabel("state-label", liberty, govtArray);
 updateDomLabel("society-label", progress, sctyArray);
 

@@ -233,7 +233,7 @@ stats"
       dist = 0;
       dist += Math.pow(Math.abs(ideologies[i].stats.econ - equality), 2);
       dist += Math.pow(Math.abs(ideologies[i].stats.govt - liberty), 2);
-      dist += Math.pow(Math.abs(ideologies[i].stats.dipl - peace), 1.73856063);
+      dist += Math.pow(Math.abs(ideologies[i].stats.indp - peace), 1.73856063);
       dist += Math.pow(
         Math.abs(ideologies[i].stats.scty - progress),
         1.73856063

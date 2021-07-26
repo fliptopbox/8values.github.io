@@ -9,40 +9,40 @@ window.glossary = {
   Unknown: "Unknown",
 
   // economy
-  Communist: "Communist",
-  Socialist: "Socialist",
-  Social: "Social",
-  Centrist: "Centrist",
-  Market: "Market",
-  Capitalist: "Capitalist",
-  LaissezFaire: "Laissez-Faire",
+  Communist: "Comunista",
+  Socialist: "Socialista",
+  Social: "Socialdemòcrata",
+  Centrist: "Centrista",
+  Market: "Neoliberal",
+  Capitalist: "Molt neoliberal",
+  LaissezFaire: "Minarquista",
 
   // diplomacy
-  Cosmopolitan: "Cosmopolitan",
-  Internationalist: "Internationalist",
-  Peaceful: "Peaceful",
-  Balanced: "Balanced",
-  Patriotic: "Patriotic",
-  Nationalist: "Nationalist",
-  Chauvinist: "Chauvinist",
+  Cosmopolitan: "Molt independentista",
+  Internationalist: "Independentista",
+  Peaceful: "Federalista",
+  Balanced: "Autonomista",
+  Patriotic: "Molt autonomista",
+  Nationalist: "Unitari",
+  Chauvinist: "Molt unitari",
 
   // government
-  Anarchist: "Anarchist",
-  Libertarian: "Libertarian",
-  Liberal: "Liberal",
-  Moderate: "Moderate",
-  Statist: "Statist",
-  Authoritarian: "Authoritarian",
-  Totalitarian: "Totalitarian",
+  Anarchist: "Anarquista",
+  Libertarian: "Individualista",
+  Liberal: "Lliberal",
+  Moderate: "Centrista",
+  Statist: "Estatista",
+  Authoritarian: "Autoritari",
+  Totalitarian: "Totalitari",
 
   // society
-  Revolutionary: "Revolutionary",
-  VeryProgressive: "Very Progressive",
-  Progressive: "Progressive",
-  Neutral: "Neutral",
-  Traditional: "Traditional",
-  VeryTraditional: "Very Traditional",
-  Reactionary: "Reactionary"
+  Revolutionary: "Revolucionari",
+  VeryProgressive: "Molt progressista",
+  Progressive: "Progressista",
+  Neutral: "Centrista",
+  Traditional: "Conservador",
+  VeryTraditional: "Molt conservador",
+  Reactionary: "Reaccionari"
 };
 
 /* 
@@ -69,7 +69,7 @@ window.econArray = [
   "LaissezFaire"
 ];
 
-window.diplArray = [
+window.indpArray = [
   "Cosmopolitan",
   "Internationalist",
   "Peaceful",
