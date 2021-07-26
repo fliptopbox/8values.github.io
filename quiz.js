@@ -90,7 +90,7 @@ function results() {
   });
 
   // update the form action
-  const action = `results.html?e=${data.e}&d=${data.d}&g=${data.g}&s=${data.s}`;
+  const action = `/results.html?e=${data.e}&d=${data.d}&g=${data.g}&s=${data.s}`;
   form.action = action;
   form.style.display = "block";
 }

@@ -42,9 +42,11 @@
 
     <form
       id="quizform"
+      name="user-data"
       action="/results.html"
       method="POST"
       style="display:none"
+      netlify-honeypot="bot-field"
       data-netlify="true"
     >
       <input type="hidden" name="form-name" value="user-data" />
