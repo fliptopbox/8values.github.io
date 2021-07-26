@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="form.css" rel="stylesheet" type="text/css" />
+    <title>Persist</title>
+    <link rel="icon" type="x-icon" href="icon.png" />
+    <link rel="shortcut icon" type="x-icon" href="icon.png" />
+    <meta charset="utf-8" />
+    <script>
+      version = "Test Edition #1"; //Remember to update this before making changes to the test itself!
+    </script>
+  </head>
+
+  <body>
+    <h1 onclick="location.href='/'">On sóc políticament?</h1>
+    <hr />
+
+    <h1>Save my opinion</h1>
+
+    <p>Explain to the user why it is important to know this information.</p>
+    <br />
+    <p>
+      Adipisicing perspiciatis laboriosam labore eveniet in. Unde labore
+      reiciendis architecto veritatis inventore ipsa? Tempore corrupti excepturi
+      saepe similique repellendus in Atque eum quidem eveniet exercitationem
+      atque iste! Possimus dignissimos in
+    </p>
+
+    <script>
+      function validate(button) {
+        const form = button.closest("form");
+        const rows = form.querySelectorAll(".form-row");
+        let errors = 0;
+
+        rows.forEach((row) => {
+          const inputs = Array.from(row.querySelectorAll("input"));
+          const count = inputs.filter((el) => el.checked);
+          errors += count.length ? 0 : 1;
+        });
+        return errors ? false : true;
+      }
+    </script>
+
+    <form action="/quiz.html" name="contact" method="GET" >
+      <div class="form-row">
+        <label>Your Province:</label>
+        <input type="radio" name="province" value="Barcelona" />Barcelona
+        <input type="radio" name="province" value="Girona" />Girona
+        <input type="radio" name="province" value="Lleida" />Lleida
+        <input type="radio" name="province" value="Tarragona" />Tarragona
+      </div>
+
+      <div class="form-row">
+        <label>Your Age Group:</label>
+        <input type="radio" name="age" value="<19" />Under 19
+        <input type="radio" name="age" value="20-29" />20s
+        <input type="radio" name="age" value="30-39" />30s
+        <input type="radio" name="age" value="40-49" />40s
+        <input type="radio" name="age" value="50-59" />50s
+        <input type="radio" name="age" value="60-69" />60s
+        <input type="radio" name="age" value="70+" />70+
+      </div>
+
+      <div class="form-row">
+        <label>Your Gender:</label>
+        <input type="radio" name="gender" value="male" /> male
+        <input type="radio" name="gender" value="female" /> female
+        <input type="radio" name="gender" value="other" /> other
+      </div>
+
+      <div class="form-row">
+        <label>Self Assesment:</label>
+        Left
+        <input type="radio" name="assesment" value="-15" />
+        <input type="radio" name="assesment" value="-10" />
+        <input type="radio" name="assesment" value="-5" />
+        <input type="radio" name="assesment" value="0" />
+        <input type="radio" name="assesment" value="5" />
+        <input type="radio" name="assesment" value="10" />
+        <input type="radio" name="assesment" value="15" />
+        Right
+      </div>
+      <button
+        class="button start"
+        type="submit"
+        onclick="return validate(this)"
+      >
+        Begin the quiz
+      </button>
+    </form>
+  </body>
+</html>

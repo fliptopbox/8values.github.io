@@ -1,3 +1,12 @@
+const dictionary = Object.fromEntries(
+  window.location.search
+    .substr(1)
+    .split(/&/g)
+    .map((s) => s.split("="))
+);
+
+console.log(dictionary);
+
 var max_econ, max_indp, max_govt, max_scty; // Max possible scores
 max_econ = max_indp = max_govt = max_scty = 0;
 
@@ -63,12 +72,25 @@ function results() {
   let final_govt = total(govt_array);
   let final_scty = total(scty_array);
 
-  const results =
-    `results.html` +
-    `?e=${calc_score(final_econ, max_econ)}` +
-    `&d=${calc_score(final_indp, max_indp)}` +
-    `&g=${calc_score(final_govt, max_govt)}` +
-    `&s=${calc_score(final_scty, max_scty)}`;
+  const form = document.querySelector("#quizform");
+  const date = new Date().toISOString();
 
-  location.href = results;
+  // update the hidden fields
+  const data = {
+    e: calc_score(final_econ, max_econ),
+    d: calc_score(final_indp, max_indp),
+    g: calc_score(final_govt, max_govt),
+    s: calc_score(final_scty, max_scty)
+  };
+
+  const payload = { ...dictionary, ...data, date };
+  Object.entries(payload).forEach(([key, value], i) => {
+    console.log(i, key, value);
+    form.querySelector(`[name="${key}"]`).value = value;
+  });
+
+  // update the form action
+  const action = `results.html?e=${data.e}&d=${data.d}&g=${data.g}&s=${data.s}`;
+  form.action = action;
+  form.style.display = "block";
 }

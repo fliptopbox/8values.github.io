@@ -1,0 +1,28 @@
+
+form {
+    display:block;
+    margin: 3rem auto;
+}
+
+.form-row {
+    font-size:1.5em;
+    width: 55rem;
+    margin: 1rem auto;
+}
+
+.form-row label {
+    font-weight:700;
+    width: 15rem;
+    display:inline-block;
+}
+
+form button {
+    background: blue;
+    font-size: 2rem;
+    border: none;
+    color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 5px;
+    margin: 3rem auto 0;
+    display: block;
+}
