@@ -5,10 +5,10 @@ const dictionary = Object.fromEntries(
     .map((s) => s.split("="))
 );
 
-const equality = dictionary["e"];
-const peace = dictionary["d"];
-const liberty = dictionary["g"];
-const progress = dictionary["s"];
+const equality = Number(dictionary["e"]);
+const peace = Number(dictionary["d"]);
+const liberty = Number(dictionary["g"]);
+const progress = Number(dictionary["s"]);
 
 const wealth = (100 - equality).toFixed(1);
 const might = (100 - peace).toFixed(1);
@@ -25,8 +25,8 @@ setBarValue("progress", progress);
 setBarValue("tradition", tradition);
 
 updateDomLabel("economic-label", equality, econArray);
-updateDomLabel("diplomatic-label", peace, indpArray);
 updateDomLabel("state-label", liberty, govtArray);
+updateDomLabel("diplomatic-label", peace, indpArray);
 updateDomLabel("society-label", progress, sctyArray);
 
 // This function was used by the ideology summary
@@ -42,8 +42,8 @@ function setBarValue(name, value) {
   const innerel = document.getElementById(name);
   const outerel = document.getElementById("bar-" + name);
 
-  outerel.style.width = value + "%";
-  innerel.innerHTML = Number(value) ? value + "%" : "-";
+  outerel.style.width = Number(value) + "%";
+  innerel.innerHTML = Number( value ).toFixed(1) + "%";
 
   if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
     innerel.style.visibility = "hidden";

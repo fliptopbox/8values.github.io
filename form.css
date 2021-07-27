@@ -4,24 +4,41 @@ form {
 }
 
 .form-row {
+  margin: 0 0 0.5em;
   font-size: 1.5em;
-  width: 55rem;
-  margin: 1rem auto;
+  display: flex;
+  align-items: flex-start;
 }
 
 .form-row strong {
   font-weight: 700;
+  flex: 0 0 auto;
   width: 13rem;
-  display: inline-block;
-}
-.form-row label {
-  border-left: 1px solid black;
-  padding-left: 0.5em;
+  padding: 0.4em 0 0;
 }
 
-.form-row label:first-child {
-  padding-left: 0;
-  border: none;
+.form-row .group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+input[type=radio] {
+  display:none;
+}
+
+.form-row label {
+  padding: 0.2em 0.5em;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin:4px;
+  min-height: 1em;
+}
+
+label.selected {
+  background: orange;
 }
 
 form.show-errors .error-message {

@@ -14,29 +14,6 @@
     <script>
       version = "Test Edition #1"; //Remember to update this before making changes to the test itself!
     </script>
-    <script>
-      function showErrors() {
-        const el = document.querySelector("[name='demographic']");
-        el.classList.add("show-errors");
-        setTimeout(() => {
-          el.classList.remove("show-errors");
-        }, 4000);
-      }
-      function validate(el) {
-        const form = document.querySelector("form");
-        const rows = form.querySelectorAll(".form-row");
-        let errors = 0;
-
-        rows.forEach((row) => {
-          const inputs = Array.from(row.querySelectorAll("input"));
-          const count = inputs.filter((el) => el.checked);
-          errors += count.length ? 0 : 1;
-        });
-
-        if (errors) showErrors();
-        return errors ? false : true;
-      }
-    </script>
   </head>
 
   <body>
@@ -53,7 +30,7 @@
     <form action="/quiz.html" name="demographic" method="GET">
       <div class="form-row">
         <strong>Provincia:</strong>
-        <span>
+        <div class="group">
           <label
             >Barcelona <input type="radio" name="province" value="Barcelona"
           /></label>
@@ -66,12 +43,12 @@
           <label
             >Tarragona <input type="radio" name="province" value="Tarragona"
           /></label>
-        </span>
+        </div>
       </div>
 
       <div class="form-row">
         <strong>Edat:</strong>
-        <span>
+        <div class="group">
           <label
             >Menys de 19 <input type="radio" name="age" value="<19"
           /></label>
@@ -91,12 +68,12 @@
             >De 60 a 69 <input type="radio" name="age" value="60-69"
           /></label>
           <label>Més de 70 <input type="radio" name="age" value="70+" /></label>
-        </span>
+        </div>
       </div>
 
       <div class="form-row">
         <strong>Gènere:</strong>
-        <span>
+        <div class="group">
           <label>Home <input type="radio" name="gender" value="male" /></label>
           <label
             >Dona <input type="radio" name="gender" value="female"
@@ -104,12 +81,12 @@
           <label
             >Altres <input type="radio" name="gender" value="other"
           /></label>
-        </span>
+        </div>
       </div>
 
       <div class="form-row">
         <strong>Com et posicionaries políticament?:</strong>
-        <span>
+        <div class="group">
           Esquerra
           <label><input type="radio" name="assesment" value="-15" /></label>
           <label><input type="radio" name="assesment" value="-10" /></label>
@@ -119,7 +96,7 @@
           <label><input type="radio" name="assesment" value="10" /></label>
           <label><input type="radio" name="assesment" value="15" /></label>
           Dreta
-        </span>
+        </div>
       </div>
 
       <button
@@ -132,5 +109,6 @@
 
       <div class="error-message">Falta informació.</div>
     </form>
+    <script src="demographic.js"></script>
   </body>
 </html>
