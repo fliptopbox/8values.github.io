@@ -18,13 +18,13 @@ window.glossary = {
   LaissezFaire: "Minarquista",
 
   // diplomacy
-  Cosmopolitan: "Molt independentista",
-  Internationalist: "Independentista",
-  Peaceful: "Federalista",
+  Cosmopolitan: "Molt unitari",
+  Internationalist: "unitari",
+  Peaceful: "Molt autonomista",
   Balanced: "Autonomista",
-  Patriotic: "Molt autonomista",
-  Nationalist: "Unitari",
-  Chauvinist: "Molt unitari",
+  Patriotic: "Federalista",
+  Nationalist: "Independentista",
+  Chauvinist: "Molt independentista",
 
   // government
   Anarchist: "Anarquista",
