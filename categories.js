@@ -1,43 +1,63 @@
+/*
+
+  This glossary is used on the results page
+  You need to translate the words "In Quotations"
+
+*/
 window.glossary = {
   // English : Translation
   Unknown: "Unknown",
 
   // economy
-  Communist: "Communist",
-  Socialist: "Socialist",
-  Social: "Social",
-  Centrist: "Centrist",
-  Market: "Market",
-  Capitalist: "Capitalist",
-  LaissezFaire: "Laissez-Faire",
+  Communist: "Comunista",
+  Socialist: "Socialista",
+  Social: "Socialdemòcrata",
+  Centrist: "Centrista",
+  Market: "Neoliberal",
+  Capitalist: "Molt neoliberal",
+  LaissezFaire: "Minarquista",
 
   // diplomacy
-  Cosmopolitan: "Cosmopolitan",
-  Internationalist: "Internationalist",
-  Peaceful: "Peaceful",
-  Balanced: "Balanced",
-  Patriotic: "Patriotic",
-  Nationalist: "Nationalist",
-  Chauvinist: "Chauvinist",
+  Cosmopolitan: "Molt unitari",
+  Internationalist: "unitari",
+  Peaceful: "Molt autonomista",
+  Balanced: "Autonomista",
+  Patriotic: "Federalista",
+  Nationalist: "Independentista",
+  Chauvinist: "Molt independentista",
 
   // government
-  Anarchist: "Anarchist",
-  Libertarian: "Libertarian",
-  Liberal: "Liberal",
-  Moderate: "Moderate",
-  Statist: "Statist",
-  Authoritarian: "Authoritarian",
-  Totalitarian: "Totalitarian",
+  Anarchist: "Anarquista",
+  Libertarian: "Individualista",
+  Liberal: "Lliberal",
+  Moderate: "Centrista",
+  Statist: "Estatista",
+  Authoritarian: "Autoritari",
+  Totalitarian: "Totalitari",
 
   // society
-  Revolutionary: "Revolutionary",
-  VeryProgressive: "Very Progressive",
-  Progressive: "Progressive",
-  Neutral: "Neutral",
-  Traditional: "Traditional",
-  VeryTraditional: "Very Traditional",
-  Reactionary: "Reactionary",
+  Revolutionary: "Revolucionari",
+  VeryProgressive: "Molt progressista",
+  Progressive: "Progressista",
+  Neutral: "Centrista",
+  Traditional: "Conservador",
+  VeryTraditional: "Molt conservador",
+  Reactionary: "Reaccionari"
 };
+
+/* 
+
+
+
+
+
+
+
+
+
+
+Do not change anything below this line
+--------------------------------------- */
 
 window.econArray = [
   "Communist",
@@ -46,17 +66,17 @@ window.econArray = [
   "Centrist",
   "Market",
   "Capitalist",
-  "LaissezFaire",
+  "LaissezFaire"
 ];
 
-window.diplArray = [
+window.indpArray = [
   "Cosmopolitan",
   "Internationalist",
   "Peaceful",
   "Balanced",
   "Patriotic",
   "Nationalist",
-  "Chauvinist",
+  "Chauvinist"
 ];
 
 window.govtArray = [
@@ -66,7 +86,7 @@ window.govtArray = [
   "Moderate",
   "Statist",
   "Authoritarian",
-  "Totalitarian",
+  "Totalitarian"
 ];
 
 window.sctyArray = [
@@ -76,5 +96,5 @@ window.sctyArray = [
   "Neutral",
   "Traditional",
   "VeryTraditional",
-  "Reactionary",
+  "Reactionary"
 ];

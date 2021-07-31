@@ -1,5 +1,14 @@
-var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-max_econ = max_dipl = max_govt = max_scty = 0;
+const dictionary = Object.fromEntries(
+  window.location.search
+    .substr(1)
+    .split(/&/g)
+    .map((s) => s.split("="))
+);
+
+console.log(dictionary);
+
+var max_econ, max_indp, max_govt, max_scty; // Max possible scores
+max_econ = max_indp = max_govt = max_scty = 0;
 
 var { questions } = window;
 let econ_array = new Array(questions.length);
@@ -12,7 +21,7 @@ init_question();
 
 for (var i = 0; i < questions.length; i++) {
   max_econ += Math.abs(questions[i].effect.econ);
-  max_dipl += Math.abs(questions[i].effect.dipl);
+  max_indp += Math.abs(questions[i].effect.indp);
   max_govt += Math.abs(questions[i].effect.govt);
   max_scty += Math.abs(questions[i].effect.scty);
 }
@@ -31,11 +40,16 @@ function init_question() {
 }
 
 function next_question(mult) {
-  econ_array[qn] = mult * questions[qn].effect.econ;
-  dipl_array[qn] = mult * questions[qn].effect.dipl;
-  govt_array[qn] = mult * questions[qn].effect.govt;
-  scty_array[qn] = mult * questions[qn].effect.scty;
-  qn++;
+  try {
+    econ_array[qn] = mult * questions[qn].effect.econ;
+    dipl_array[qn] = mult * questions[qn].effect.indp;
+    govt_array[qn] = mult * questions[qn].effect.govt;
+    scty_array[qn] = mult * questions[qn].effect.scty;
+    qn++;
+  } catch (err) {
+    console.log(qn, questions.length, err);
+  }
+
   if (qn < questions.length) {
     init_question();
   } else {
@@ -59,16 +73,32 @@ function total(array) {
 
 function results() {
   let final_econ = total(econ_array);
-  let final_dipl = total(dipl_array);
+  let final_indp = total(dipl_array);
   let final_govt = total(govt_array);
   let final_scty = total(scty_array);
 
-  const results =
-    `results.html` +
-    `?e=${calc_score(final_econ, max_econ)}` +
-    `&d=${calc_score(final_dipl, max_dipl)}` +
-    `&g=${calc_score(final_govt, max_govt)}` +
-    `&s=${calc_score(final_scty, max_scty)}`;
+  const { origin } = window.location;
+  const production = /netlify/i;
+  const form = document.querySelector("[name='user-data']");
+  const date = new Date().toISOString();
 
-  location.href = results;
+  // update the hidden fields
+  const data = {
+    e: calc_score(final_econ, max_econ),
+    d: calc_score(final_indp, max_indp),
+    g: calc_score(final_govt, max_govt),
+    s: calc_score(final_scty, max_scty)
+  };
+
+  const payload = { ...dictionary, ...data, date };
+  Object.entries(payload).forEach(([key, value], i) => {
+    console.log(i, key, value);
+    form.querySelector(`[name="${key}"]`).value = value;
+  });
+
+  // update the form action
+  const action = `/results.html?e=${data.e}&d=${data.d}&g=${data.g}&s=${data.s}`;
+  form.action = action;
+  form.method = production.test(origin) ? "POST" : "GET";
+  form.submit();
 }
